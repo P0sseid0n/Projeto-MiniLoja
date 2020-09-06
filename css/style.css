@@ -41,18 +41,23 @@ header .logo a{
     user-select: none;
 }
 
-header .container > div, header .container > nav{
-    width: calc(100% / 3);
+
+header .container > div{
+    width: 25%;
 }
 
 header nav{
     text-align: center;
+    width: 50%;
+}
+
+header nav ul{
+    list-style: none;
 }
 
 header nav ul li{
     display: inline-block;
-    padding-top:25px;
-    padding-right:40px;
+    padding: 25px 5%;
 }
 
 header nav ul li a{
@@ -130,6 +135,8 @@ section.tela{
 .total .produto h4{
     text-align: center;
     text-transform: uppercase;
+    user-select: none;
+    font-size: 18px;
 }
 
 .finalizar-compra div{
@@ -147,6 +154,7 @@ section.tela{
     cursor: pointer;
     outline: 0;
     font-size: 16px;
+    border-radius: 5px;
 }
 
 .finalizar-compra div:first-of-type button:hover{
@@ -195,6 +203,7 @@ section.tela{
     background-color: rgb(255,255,255);
     border-radius: 5px;
     padding: 8px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.10);
 }
 
 .produto-compra .img-produto{
@@ -235,7 +244,16 @@ section.tela{
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
+    .loja > div:not(.clear){
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 700px){
+    .loja > div:not(.clear){
+        width: calc(100% / 3);
+    }
     header .container{
         flex-direction: column;
         text-align: center;
@@ -259,13 +277,6 @@ section.tela{
         padding: 0;
         padding-top: 15px;
         display: block;
-    }
-
-}
-
-@media screen and (max-width: 700px){
-    .loja > div:not(.clear){
-        width: calc(100% / 3);
     }
 }
 
