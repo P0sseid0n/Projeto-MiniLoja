@@ -263,6 +263,19 @@ section.tela{
 
 }
 
+@media screen and (max-width: 700px){
+    .loja > div:not(.clear){
+        width: calc(100% / 3);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .loja > div:not(.clear){
+        width: calc(100% / 2);
+    }
+
+}
+
 @media screen and (max-width: 400px){
     .total{
         width: 100%;
