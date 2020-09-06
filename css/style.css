@@ -1,0 +1,282 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Grandstander', cursive;
+}
+
+html, body{
+    height: 100%;
+    background-color: rgb(240,240,240);
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+header{
+    color: white;
+    background-color: rgb(139, 221, 137);
+    padding: 20px 2%;
+    border-bottom: 2px solid rgb(94, 199, 94);
+}
+
+header .container{
+    display: flex;
+}
+
+header .logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 52px;
+    font-weight: 900;
+    font-style: italic;
+    margin-top: 10px;
+    display: block;
+    user-select: none;
+}
+
+header .container > div, header .container > nav{
+    width: calc(100% / 3);
+}
+
+header nav{
+    text-align: center;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding-top:25px;
+    padding-right:40px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+header nav ul li a:hover{
+    color: rgb(200, 255, 200);
+    text-decoration: underline;
+}
+
+header nav ul li a.selected{
+    color: rgb(84, 173, 82);
+    font-weight: 700;
+    font-size: 22px;
+    pointer-events: none;
+}
+
+.sacola{
+    text-align: right;
+}
+
+.sacola input{
+    display: none;
+}
+
+.sacola input:checked ~ div{
+    display: block;
+}
+
+.sacola i {
+    position: relative;
+    cursor: pointer;
+}
+
+.sacola i span{
+    color: rgb(139, 221, 137);
+    position: absolute;
+    top: 28px;
+    right: 8px;
+    font-size: 34px;
+    user-select: none;
+}
+
+/******************** TELA ********************/
+
+section.tela{
+    position: relative;
+}
+
+.total{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    background-color: rgb(235,240,235);
+    border: 2px solid rgb(94, 199, 94);
+    border-bottom-left-radius: 15px;
+    color: black;
+}
+
+.total .produto{
+    background-color: rgb(245, 245, 245);
+    text-align: left;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.total .produto h4{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.finalizar-compra div{
+    padding: 10px;
+    float: left;
+    width: 50%;
+}
+
+.finalizar-compra button{
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    font-size: 16px;
+}
+
+.finalizar-compra div:first-of-type button:hover{
+    background-color: rgb(44, 184, 42);
+}
+
+.finalizar-compra div:first-of-type button{
+    background-color: rgb(29, 167, 26);
+}
+
+.finalizar-compra div:last-of-type button{
+    background-color: rgb(167, 26, 26);
+}
+
+.finalizar-compra div:last-of-type button:hover{
+    background-color: rgb(190, 62, 62);
+}
+
+/******************** COMPRAS ********************/
+
+.compras{
+    height: 85%;
+}
+
+.compras .container{
+    height: 100%;
+}
+
+.loja{
+    width: 100%;
+    border: 2px solid rgb(94, 199, 94);
+    border-top: 0;
+    padding: 20px 2%;
+    min-height: 100%;
+}
+
+.loja > div:not(.clear){
+    padding: 10px 20px;
+    width: calc(100% / 5);
+    float: left;
+}
+
+.produto-compra{
+    float: left;
+    text-align: center;
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.produto-compra .img-produto{
+    width: 100%;
+    padding-top: 100%;
+    background-color: rgb(100,150,100);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.produto-compra div:nth-of-type(2){
+    margin-top: 24px;
+    line-height: 25px;
+}
+
+.produto-compra div:last-of-type{
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.produto-compra button{
+    padding: 10px 5px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    font-size: 15px;
+    background-color: rgb(29, 167, 26);
+    border-radius: 5px;
+}
+
+.produto-compra button:hover{
+    background-color: rgb(44, 184, 42);
+}
+
+.finalizar-compra div:first-of-type button:hover{
+    background-color: rgb(44, 184, 42);
+}
+
+
+@media screen and (max-width: 600px){
+    header .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .container > div, header .container > nav{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    header h1{
+        margin-top: 0px;
+    }
+
+    .sacola{
+        text-align: center;
+    }
+
+    
+    header nav ul li{
+        padding: 0;
+        padding-top: 15px;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    .total{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 250px){
+    .finalizar-compra div{
+        float: none;
+        width: 100%;
+    }
+
+    .total .produto{
+        text-align: center;
+    }
+}
